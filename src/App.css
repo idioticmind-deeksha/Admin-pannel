@@ -1,0 +1,183 @@
+body { margin : 0; padding: 0; box-sizing: border-box; font-family: "Open Sans", sans-serif;
+ background-color: #f8f8fa !important;
+}
+h1,h2,h3,h4,h5,h6,p,li {
+  margin-bottom: 0 !important;
+}
+button {
+  text-transform: capitalize !important;
+}
+header { width: 100%; height: 60px; background: #fff; line-height: 60px;}
+header .logo{ width: 100px;}
+header button {min-width: 36px !important; width: 36px; height: 36px; background: #f0f5ff !important; color: #292929; font-size: 2rem !important; padding: 2px !important;}
+header button:hover svg {color: #0858f7;}
+header button svg { width: 16px; color: #292929;}
+.searchBox{width: 400px; height: 40px; background: #f0f5ff; border-radius: 6px; padding: 3px 15px}
+.searchBox input{ background: transparent; border: 0px; outline: none; padding-left: 5px; font-size: 15px; height: 40px;}
+.searchBox input::-webkit-input-placeholder{color: rgba(0,0,0,0.7);}
+.searchBox svg {font-size: 18px; color: #292929}
+.myAcc {width: 135px; height: 40px;}
+.myAcc .userImg {overflow: hidden; width: 32px; height: 32px; border: 1px solid #0858f7; padding: 0px;}
+.myAcc .userImg span{width: 28px; height: 28px; overflow: hidden; cursor: pointer; position: relative;}
+.myAcc .userInfo {padding-left: 10px;}
+.myAcc .userInfo p { font-size: 9px; line-height: 15px;}
+.myAcc .userInfo h4 { font-size: 12px; font-weight: 600; margin-bottom: 0; text-transform: capitalize; color: #0858f7;}
+.profiledropdown ul li svg { width: 20px; height: 20px; }
+/* Container for sidebar and main content */
+.header {
+    position: sticky;
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    background-color: rgba(255,255,255,0.7); /* Background color for the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for visual separation */
+    width: 100%; /* Full width */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+  
+  /* Container for sidebar and main content */
+  .main-box {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 50px); /* Adjust height based on header height */
+  }
+  
+  /* Sidebar styles */
+  .sidebar  {
+    background-color: #fff; /* Example background color */
+  }
+  .sidebar .sidebarnav {
+    overflow-y: auto; /* Allow vertical scrolling */
+  }
+  .sidebar .icon svg {
+    height: 20px;
+    width: 20px;
+}
+.sidebar .sidebarnav::-webkit-scrollbar {
+  width: 3px !important;
+}
+.sidebar .sidebarnav::-webkit-scrollbar-thumb {
+  background: transparent !important;
+}
+.sidebar:hover .sidebarnav::-webkit-scrollbar-thumb {
+  background: #0858f7 !important;
+}
+.sidebar ul li button:hover{background: #f1f1f1 !important;}
+.sidebar ul li button.act{background: #f1f1f1 !important;}
+
+  /* Main content styles */
+  .main-content {
+    flex: 1; /* Takes remaining width */
+    padding: 20px;
+    overflow-y: auto; /* Allow vertical scrolling */
+  }
+  .sidebarnav ul{
+    padding: 0;
+    list-style-type: none;
+  }
+  .sidebarnav .submenu {padding: 0 15px; position: relative; }
+  .sidebarnav .submenu::before {content: ''; width: 1; height: 95%; position: absolute; top: 0px; left: 20px; background: rgba(0,0,0,0.2); }
+  
+  .sidebarnav .submenu li { width: 100%; padding: 0 25px; border-left: 1px solid rgba(0,0,0,0.1);}
+  .sidebarnav .submenu li a{ color: #5e5d72 !important; text-decoration: none; display: block; padding: 6px 0; font-size: 14px; font-weight: 500; transform: all ease 0.3s;}
+  .sidebarnav .submenu li a:hover {color: #0858f7 !important}
+
+  .sidebar ul .submenuwrap.colapsed{height: 0px; transition: all ease 0.4s; overflow: hidden; opacity: 0;}
+  .sidebar ul .submenuwrap.colapsed .submenu{opacity: 0;}
+
+  .sidebar ul .submenuwrap.colapse{height: auto; overflow: inherit; opacity: 1;padding: 10px 0; transition: all ease 0.4s;}
+  .sidebar ul .submenuwrap.colapse .submenu{opacity: 1;}
+
+  .sidebar button .arrow svg {
+    transition: all ease 0.3s;
+    transform: rotate(0deg);
+}
+.sidebar button.active .icon svg{
+  color: #0858f7 !important;
+}
+.sidebar button.active .arrow svg {
+    transition: all ease 0.3s;
+    transform: rotate(90deg);
+}
+.sidebar button.active {
+  background: #f1f1f1 !important;
+}
+  .sidebarnav button { color: #5e5d72; }
+  .logooutWrapper {padding: 0px 25px;}
+  .logoutWrapper .logoutBox{width: 100%; height: 100px; padding: 25px; background: #bcd2fd; border-radius: 10px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;}
+  .logoutWrapper .logoutBox::before{content: ''; width: 70px; height: 70px; background: #0858f7; border-radius: 100%; position: absolute; top:-30px; right: -30px; opacity: 0.5; }
+  .logoutWrapper .logoutBox::after{content: ''; width: 30px; height: 30px; background: #0858f7; border-radius: 100%; position: absolute; top:20px; left: 10px; opacity: 0.5; }
+  .logooutWrapper .logoutBox button {font-size: 14px !important; font-weight: 600 !important;}
+  .logooutWrapper .logoutBox button svg {font-size: 18px;}
+  .box-wrap { width: 48%; height: 170px; border-radius: 10px !important; position: relative; overflow: hidden; color: #fff;}
+  .box-wrap .col1 h4 { font-size: 20px; font-weight:600; }
+  .box-wrap .col1 span {font-size: 35px; font-weight: bold; line-height: 45px;}
+  .box-wrap .icon {display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 10px; background-image: linear-gradient(to bottom right, rgba(0,0,0,0.0), rgba(0,0,0,0.4));}
+  .box-wrap .icon svg{ font-size: 30px; opacity: 0.6; color: #fff;}
+  .box-wrap .toggleIcon{ font-size: 22px; color: rgba(255, 255, 255); cursor: pointer; min-width: 40px; width: 40px; height: 40px; border-radius: 50%; }
+  .box-wrap .chart { opacity: 0.08 ; position: absolute; bottom: 20px; left: 20px ;
+  }
+  .box-wrap .chart svg{ font-size: 100px; color: #000;}
+  .box-wrap .bottomElement {
+   position: relative;
+   top: 15px; 
+  }
+  
+.graphBox {background-image: linear-gradient(#1a50b5, #2a6ff7); border-radius: 10px; width: 100%; height: 100%;}
+.box-wrap .graphBox h4{ font-size: 20px; font-weight:600; }
+.box-wrap .graphBox span {font-size: 35px; font-weight: bold; line-height: 45px;}
+.graphBox p { font-size: 13px; color: #fff; opacity: 0.7;}
+.wrapper-card .card {
+  border-radius: 10px !important;
+}
+.card h3 {font-size: 18px; font-weight: bold; color: #403e57;}
+.filter-section .showBy {
+  font-size: 14px;
+  font-weight: 600;
+}
+.selected-by .MuiSelect-select {
+  padding: 10px 15px;
+}
+.table-design .thead-dark th {
+  background: #1866ee !important;
+  color: #fff;
+  border-color: rgba(255, 255, 255,0.3) !important;
+  font-size: 14px !important;
+}
+.table-design tbody td { font-size: 15px !important; color: #403e57;     vertical-align: middle;}
+.table-design .actions button{ min-width: 35px !important; width: 35px !important; height: 35px;}
+.table-design .actions button svg{ font-size: 30px !important;}
+.table-design .actions button.secondary {background-color: rgba(203,60,231,0.1);}
+.table-design .actions button.success {background-color: rgba(26,159,83,0.1);}
+.table-design .actions button.error {background-color: rgba(241,17,51,0.1);}
+.table-design .info h6, .info p { overflow: hidden; text-overflow: ellipsis; white-space:nowrap;}
+.table-design .info { min-width: 150px;}
+.table-design .imgwrap img{ width: 60px;}
+/* Responsive sidebar width using calc() */
+  @media (min-width: 320px) {
+    .sidebar {
+      width: calc(100vw - 80%); /* 20% of the viewport width */
+    }
+    .main-content {
+      width: calc(100vw - 20%); /* Remaining width */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .sidebar {
+      width: calc(100vw - 75%); /* 25% of the viewport width */
+    }
+    .main-content {
+      width: calc(100vw - 25%); /* Remaining width */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .sidebar {
+      width: calc(100vw - 84%); /* 30% of the viewport width */
+    }
+    .main-content {
+      width: calc(100vw - 16%); /* Remaining width */
+    }
+  }
+  
