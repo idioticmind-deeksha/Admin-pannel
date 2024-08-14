@@ -19,7 +19,7 @@ import { MyContext } from "../App";
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-
+  const [isLogin] = useState(false);
   const context = useContext(MyContext)
   const handleMenuClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -82,7 +82,8 @@ const Header = () => {
             <Button className="rounded-circle me-3">
               <FaBell />
             </Button>
-            <div className="myAccWrapper">
+            {
+              isLogin !== true ? <Link to={'/login'}><Button variant="contained" className="me-3 fs-6 w-auto btn-primary px-3 text-white bg-primary">Sign in</Button></Link> :  <div className="myAccWrapper">
               <Button
                 onClick={handleMenuClick}
                 className="myAcc d-flex align-items-center text-start"
@@ -98,6 +99,9 @@ const Header = () => {
                 </div>
               </Button>
             </div>
+            }
+            
+           
           </Col>
         </Row>
       </Container>
