@@ -157,13 +157,13 @@ header button svg { width: 16px; color: #292929;}
   width: 100%;
   max-width: 100%;
 }
-.login-page {
+.auth-page {
   width: 100%;
   height: 100vh;
   padding: 35px 25px;
   background: url(./assets/images/pattern.webp) repeat-x top center #fff;
 }
-.login-page:before {
+.auth-page:before {
   content: '';
   position: absolute;
   top: 0;
@@ -174,12 +174,18 @@ header button svg { width: 16px; color: #292929;}
   z-index: 1;
   opacity: 1;
 }
-.loginBox {
+.auth-box {
   z-index: 999;
   position: relative;
   opacity: 1;
+}
+.z-index-99{
+  z-index: 99;
+}
+.loginBox {
   max-width: 370px;
   margin: 0 auto;
+  padding: 30px 10px;
 }
 .logincontent {
   background-color: #f0f0f0;
@@ -216,6 +222,16 @@ header button svg { width: 16px; color: #292929;}
 }
 .loginwithgoogle {
   font-weight: 700;
+}
+.auth-left-side {
+  max-width: 600px;
+}
+.regist-Box .passwordform .toggleShowPassword {
+  position: absolute;
+  top: 50%;
+  transform: translate(-5px, -50%);
+  right: 10px;
+  cursor: pointer;
 }
 /* Responsive sidebar width using calc() */
   @media (min-width: 320px) {

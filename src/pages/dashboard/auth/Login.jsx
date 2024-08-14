@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../../assets/images/desktop-logo.png";
 import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
@@ -7,11 +7,16 @@ import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
 const Login = () => {
     const [isShowPassword, setisShowPassword] = useState(false);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <section className="without-login-page">
-                <div className="login-page">
-                    <div className="loginBox">
+                <div className="auth-page">
+                    <div className="loginBox auth-box">
                         <div className="loginheader text-center">
                             <Link to="/" className="text-decoration-none">
                                 <img src={logo} className="logo" alt="Logo" />
@@ -20,29 +25,25 @@ const Login = () => {
                         </div>
                         <div className="logincontent">
                             <Form>
-                                <Form.Group className="mb-3 mt-2" controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Email address</Form.Label>
-                                    <Form.Control type="email" placeholder="name@example.com" />
+                                <Form.Group className="mb-3 mt-2">
+                                    <Form.Label htmlFor="inputEmail">Email address</Form.Label>
+                                    <Form.Control type="email" id="inputEmail" placeholder="name@example.com" autoFocus />
                                 </Form.Group>
-                                <Form.Group className="mb-3 passwordform" controlId="exampleForm.COntrolInput2">
-                                    <Form.Label htmlFor="inputPassword5">Password</Form.Label>
+                                <Form.Group className="mb-3 passwordform">
+                                    <Form.Label htmlFor="inputPassword">Password</Form.Label>
                                     <Form.Control
-                                        type={`${isShowPassword===true ? 'text' : 'password'}`}
-                                        id="inputPassword5"
+                                        type={isShowPassword ? 'text' : 'password'}
+                                        id="inputPassword"
                                         aria-describedby="passwordHelpBlock"
                                         placeholder="Enter your Password"
                                     />
-                                    <span className="toggleShowPassword" onClick={()=>setisShowPassword(!isShowPassword)}>
-                                        {
-                                            isShowPassword === true ? <IoMdEyeOff /> : <IoMdEye /> 
-                                        }
-                                       
+                                    <span className="toggleShowPassword" onClick={() => setisShowPassword(!isShowPassword)}>
+                                        {isShowPassword ? <IoMdEyeOff /> : <IoMdEye />}
                                     </span>
                                 </Form.Group>
                                 <Button variant="contained" className="w-100" type="submit">Sign In</Button>
                                 <div className="my-3 forgetpassword text-center">
-                                    <Link to={'/forgot-password'}> FORGOT PASSWORD
-                                    </Link>
+                                    <Link to={'/forgot-password'}>FORGOT PASSWORD</Link>
                                 </div>
                                 <div className="d-flex align-items-center justify-content-center or">
                                     <span className="line"></span>
@@ -50,8 +51,7 @@ const Login = () => {
                                     <span className="line"></span>
                                 </div>
                                 <div className="mt-3 loginwithgoogle">
-                                    <Button variant="outlined" 
-                                    className="btn btn-outline-primary w-100 py-2 text-primary">
+                                    <Button variant="outlined" className="btn btn-outline-primary w-100 py-2 text-primary">
                                         Sign In with Google
                                     </Button>
                                 </div>
@@ -59,14 +59,14 @@ const Login = () => {
                         </div>
                         <div className="loginfooter logincontent mt-3 p-3">
                             <div className="dont-have-account text-center">
-                            Don't have an account?<span className="ps-2"><Link to={'/registation'} className="text-decoration-none text-primary">Register</Link></span>
+                                Don't have an account?<span className="ps-2"><Link to={'/registation'} className="text-decoration-none text-primary">Register</Link></span>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>
         </>
     );
-}
-export default Login; 
+};
+
+export default Login;

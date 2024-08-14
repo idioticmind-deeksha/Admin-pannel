@@ -5,6 +5,7 @@ import HomePage from "./pages/dashboard/Home";
 import Login from './pages/dashboard/auth/Login';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Registation from './pages/dashboard/auth/registation';
 
 // Creating context with a more descriptive name
 const MyContext = createContext();
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/registation" element={<Registation />} />
         </Routes>
       </BrowserRouter>
     </MyContext.Provider>
