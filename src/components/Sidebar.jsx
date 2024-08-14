@@ -1,27 +1,20 @@
 import { Button } from "@mui/material";
-import React,{ useContext } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { MdDashboard } from "react-icons/md";
-import { MdKeyboardArrowRight } from "react-icons/md";
-import { FaProductHunt } from "react-icons/fa";
-import { FaCartArrowDown } from "react-icons/fa";
-import { MdMessage } from "react-icons/md";
-import { IoMdNotifications } from "react-icons/io";
-import { IoMdSettings } from "react-icons/io";
-import { MdOutlineLogin } from "react-icons/md";
-import { FaUserAlt } from "react-icons/fa";
-import { useState } from "react";
-import { MdOutlineLogout } from "react-icons/md";
-import { MyContext} from './../App';
+import { MdDashboard, MdKeyboardArrowRight, MdMessage, MdOutlineLogin, MdOutlineLogout } from "react-icons/md";
+import { FaProductHunt, FaCartArrowDown, FaUserAlt } from "react-icons/fa";
+import { IoMdNotifications, IoMdSettings } from "react-icons/io";
 
 const SideBar = () => {
-  const [activeTab, setactiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
   const [isToggleSubmenu, setIsToggleSubmenu] = useState(false);
-  const context = useContext(MyContext);
+  // const context = useContext(MyContext); // Removed as it's not used
+
   const isOpenSubmenu = (index) => {
-    setactiveTab(index);
+    setActiveTab(index);
     setIsToggleSubmenu(!isToggleSubmenu);
   };
+
   return (
     <>
       <div className="sidebarnav p-3">
@@ -47,7 +40,7 @@ const SideBar = () => {
           <li>
             <Button
               className={`w-100 d-flex align-items-center py-3 px-2 ${
-                activeTab === 1 && isToggleSubmenu === true ? "active" : ""
+                activeTab === 1 && isToggleSubmenu ? "active" : ""
               }`}
               onClick={() => isOpenSubmenu(1)}
             >
@@ -61,12 +54,10 @@ const SideBar = () => {
             </Button>
             <div
               className={`submenuwrap ${
-                activeTab === 1 && isToggleSubmenu === true
-                  ? "colapse"
-                  : "colapsed"
+                activeTab === 1 && isToggleSubmenu ? "colapse" : "colapsed"
               }`}
             >
-              <ul className={`submenu`}>
+              <ul className="submenu">
                 <li>
                   <Link to="">Product List</Link>
                 </li>
@@ -190,11 +181,14 @@ const SideBar = () => {
         </ul>
         <div className="logoutWrapper">
           <div className="logoutBox">
-            <Button variant="contained" className="text-white"><MdOutlineLogout className="me-2"/> Logout</Button>
+            <Button variant="contained" className="text-white">
+              <MdOutlineLogout className="me-2" /> Logout
+            </Button>
           </div>
         </div>
       </div>
     </>
   );
 };
+
 export default SideBar;
