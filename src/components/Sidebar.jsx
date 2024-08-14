@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import React from "react";
+import React,{ useContext } from "react";
 import { Link } from "react-router-dom";
 import { MdDashboard } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -12,7 +12,7 @@ import { MdOutlineLogin } from "react-icons/md";
 import { FaUserAlt } from "react-icons/fa";
 import { useState } from "react";
 import { MdOutlineLogout } from "react-icons/md";
-import { MyContext} from '../../App';
+import { MyContext} from './../App';
 
 const SideBar = () => {
   const [activeTab, setactiveTab] = useState(0);

@@ -157,27 +157,60 @@ header button svg { width: 16px; color: #292929;}
   @media (min-width: 320px) {
     .sidebar {
       width: calc(100vw - 80%); /* 20% of the viewport width */
+      transition: all ease 0.3s;
+    }
+    .sidebar.toggle{ 
+      width: 0;
+      overflow: hidden;
+      transition: all ease 0.3s;
     }
     .main-content {
       width: calc(100vw - 20%); /* Remaining width */
+      transition: all ease 0.3s;
+    }
+    .main-content.toggle{
+      width: 100%;
+      transition: all ease 0.3s;
     }
   }
   
   @media (min-width: 768px) {
     .sidebar {
       width: calc(100vw - 75%); /* 25% of the viewport width */
+      transition: all ease 0.3s;
+    }
+    .sidebar.toggle{ 
+      width: 0;
+      overflow: hidden;
+      transition: all ease 0.3s;
     }
     .main-content {
       width: calc(100vw - 25%); /* Remaining width */
+      transition: all ease 0.3s;
+    }
+    .main-content.toggle{
+      width: 100%;
+      transition: all ease 0.3s;
     }
   }
   
   @media (min-width: 1024px) {
     .sidebar {
       width: calc(100vw - 84%); /* 30% of the viewport width */
+      transition: all ease 0.3s;
+    }
+    .sidebar.toggle{ 
+      width: 0;
+      overflow: hidden;
+      transition: all ease 0.3s;
     }
     .main-content {
       width: calc(100vw - 16%); /* Remaining width */
+      transition: all ease 0.3s;
+    }
+    .main-content.toggle{
+      width: 100%;
+      transition: all ease 0.3s;
     }
   }
   

@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
           <div className={`sidebar ${context.isToggleSidebar===true ? 'toggle' : ''}`}>
             <SideBar />
           </div>
-          <div className="main-content">
+          <div className={`main-content ${context.isToggleSidebar===true ? 'toggle' : ''}`}>
             <div className="main pt-3">{children}</div>
             <footer>
               {/* <Footer /> */}
