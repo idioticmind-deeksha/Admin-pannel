@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DashboardPage from "./pages/dashboard/Dasboard";
 import HomePage from "./pages/dashboard/Home";
@@ -13,14 +13,27 @@ const MyContext = createContext();
 function App() {
   const [isToggleSidebar, setIsToggleSidebar] = useState(false);
   const [isSidebarAndHeaderHidden, setSidebarAndHeaderHidden] = useState(false);
-
+  const [themeMode, setThemeMode] = useState(true);
   const contextValues = {
     isToggleSidebar,
     setIsToggleSidebar,
     isSidebarAndHeaderHidden,
     setSidebarAndHeaderHidden,
+    themeMode,
+    setThemeMode
   };
+useEffect (() => {
+if(themeMode === true) {
+  document.body.classList.remove('dark');
+  document.body.classList.add('light');
+  localStorage.setItem('themeMode', 'light');
+} else {
+  document.body.classList.remove('light');
+  document.body.classList.add('dark');
+  localStorage.setItem('themeMode', 'dark');
 
+}
+}, [themeMode])
   return (
     <MyContext.Provider value={contextValues}>
       <BrowserRouter>

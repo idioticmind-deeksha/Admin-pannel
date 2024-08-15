@@ -69,7 +69,6 @@ header button svg { width: 16px; color: #292929;}
   .main-content {
     flex: 1; /* Takes remaining width */
     padding: 20px;
-    overflow-y: auto; /* Allow vertical scrolling */
   }
   .sidebarnav ul{
     padding: 0;
@@ -232,6 +231,42 @@ header button svg { width: 16px; color: #292929;}
   transform: translate(-5px, -50%);
   right: 10px;
   cursor: pointer;
+}
+body.dark header, body.dark .sidebar, body.dark .sidebar .sidebarnav{background-color: #112143;}
+body.dark header button, body.dark .searchBox, body.dark .sidebar button.active,body.dark .sidebar ul li button:hover {background: #273250!important;}
+body.dark .sidebar button ,body.dark .sidebar button .icon, body.dark .sidebar button svg, body.dark .sidebar button .arrow, body.dark .sidebarnav .submenu li a {
+  color: #ffffffb3 !important;
+}
+body.dark .sidebarnav .submenu li {
+  border-left: 1px solid #ffffffb3;
+} 
+body.dark .sidebarnav .submenu::before{
+  background: #ffffffb3 !important;
+}
+body.dark .sidebar button.active .icon svg, body.dark .sidebar button.active {
+  color: #fff !important;
+}
+body.dark .wrapper-card .card {
+  background: #112143;
+}
+body.dark header button svg, body.dark .searchBox svg, body.dark .searchBox input::placeholder, body.dark .card h3, body.dark .card h6, body.dark .filter-section .MuiSelect-select, body.dark .filter-section svg, body.dark tbody tr td, body.dark .userInfo h4, body.dark .userInfo p {color: #ffffffb3 !important;}
+body.dark{background: #071739 !important;}
+body.dark .filter-section .MuiInputBase-root {
+  border: 1px solid #ffffffb3 !important;
+}
+body.dark .filter-section .MuiInputBase-root ul {
+  background: red;
+  color: #ffffffb3;
+}
+body.dark table.table.table-striped.table-bordered.table-hover {
+  border: 1px solid #6c6c6c;
+}
+body.dark tbody tr td, body.dark .table-design .thead-dark th {
+  background: #273250!important;
+}
+body.dark .MuiPaper-root.MuiPaper-elevation {
+  background: #112143;
+  color: #ffffffb3;
 }
 /* Responsive sidebar width using calc() */
   @media (min-width: 320px) {

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "./../assets/images/desktop-logo.png";
+import darkLogo from "./../assets/images/logo-desktop-dark.png";
 import { Button } from "@mui/material";
 import { MdMenuOpen, MdOutlineLightMode, MdOutlineMenu } from "react-icons/md";
 import SearchBox from "./SearchBox";
@@ -35,7 +36,7 @@ const Header = () => {
         <Row className="align-items-center">
           <Col lg={2} xs={3} className="partone text-center">
             <Link to="/">
-              <img src={logo} className="logo" alt="Logo" />
+              <img src={ `${context.themeMode === true ? logo : darkLogo }`} className="logo" alt="Logo" />
             </Link>
           </Col>
           <Col xs={3} className="d-flex align-items-center parttwo">
@@ -50,7 +51,7 @@ const Header = () => {
             xs={7}
             className="align-items-center part-three d-flex ps-4 justify-content-end"
           >
-            <Button onClick={handleMenuClick} className="rounded-circle me-3">
+            <Button onClick={()=> context.setThemeMode(!context.themeMode)} className="rounded-circle me-3">
               <MdOutlineLightMode />
             </Button>
             <Menu
@@ -83,7 +84,7 @@ const Header = () => {
               <FaBell />
             </Button>
             {
-              isLogin !== true ? <Link to={'/login'}><Button variant="contained" className="me-3 fs-6 w-auto btn-primary px-3 text-white bg-primary">Sign in</Button></Link> :  <div className="myAccWrapper">
+              isLogin !== false ? <Link to={'/login'}><Button variant="contained" className="me-3 fs-6 w-auto btn-primary px-3 text-white bg-primary">Sign in</Button></Link> :  <div className="myAccWrapper">
               <Button
                 onClick={handleMenuClick}
                 className="myAcc d-flex align-items-center text-start"

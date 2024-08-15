@@ -170,7 +170,7 @@ const DashboardPage = () => {
                         inputProps={{ "aria-label": "Without label" }}
                         className="selected-by"
                       >
-                        <MenuItem value="">
+                        <MenuItem value="" className="dropdown-select">
                           <em>None</em>
                         </MenuItem>
                         <MenuItem value={10}>Ten</MenuItem>
@@ -189,7 +189,7 @@ const DashboardPage = () => {
                         inputProps={{ "aria-label": "Without label" }}
                         className="selected-by"
                       >
-                        <MenuItem value="">
+                        <MenuItem value="" className="dropdown-select">
                           <em>None</em>
                         </MenuItem>
                         <MenuItem value={10}>Ten</MenuItem>
@@ -208,7 +208,7 @@ const DashboardPage = () => {
                         inputProps={{ "aria-label": "Without label" }}
                         className="selected-by"
                       >
-                        <MenuItem value="">
+                        <MenuItem value="" className="dropdown-select">
                           <em>None</em>
                         </MenuItem>
                         <MenuItem value={10}>Ten</MenuItem>
