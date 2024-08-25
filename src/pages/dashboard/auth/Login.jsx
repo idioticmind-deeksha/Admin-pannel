@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import Button from '@mui/material/Button';
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import { MyContext } from "../../../App";
+import darkLogo from "../../../assets/images/logo-desktop-dark.png";
 
 const Login = () => {
     const [isShowPassword, setisShowPassword] = useState(false);
-
+    const context = useState(MyContext)
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -15,11 +17,11 @@ const Login = () => {
     return (
         <>
             <section className="without-login-page">
-                <div className="auth-page">
+                <div className="auth-page p-0">
                     <div className="loginBox auth-box">
                         <div className="loginheader text-center">
                             <Link to="/" className="text-decoration-none">
-                                <img src={logo} className="logo" alt="Logo" />
+                                <img src={`${context.themeMode === true ? logo : darkLogo }`} className="logo" alt="Logo" />
                                 <h5 className="py-3 text-decoration-none text-black">Login to Mamix</h5>
                             </Link>
                         </div>

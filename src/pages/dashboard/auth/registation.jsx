@@ -5,10 +5,13 @@ import Form from 'react-bootstrap/Form';
 import Button from '@mui/material/Button';
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { Row, Col } from "react-bootstrap";
+import { MyContext } from "../../../App";
+import darkLogo from "../../../assets/images/logo-desktop-dark.png";
 
 const Registation = () => {
     const [isShowPassword, setisShowPassword] = useState(false);
     const [isShowConfirmPassword, setisShowConfirmPassword] = useState(false);
+    const context = useState(MyContext);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -35,7 +38,7 @@ const Registation = () => {
                                 <div className="logincontent">
                                     <div className="loginheader text-center">
                                         <Link to="/" className="text-decoration-none">
-                                            <img src={logo} className="logo" alt="Logo" />
+                                            <img src={`${context.themeMode === true ? logo : darkLogo }`} className="logo" alt="Logo" />
                                             <h5 className="py-3 text-decoration-none text-black">Registration to Mamix</h5>
                                         </Link>
                                     </div>

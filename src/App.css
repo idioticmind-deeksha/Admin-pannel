@@ -17,11 +17,12 @@ header button svg { width: 16px; color: #292929;}
 .searchBox input::-webkit-input-placeholder{color: rgba(0,0,0,0.7);}
 .searchBox svg {font-size: 18px; color: #292929}
 .myAcc {width: 135px; height: 40px;}
-.myAcc .userImg {overflow: hidden; width: 32px; height: 32px; border: 1px solid #0858f7; padding: 0px;}
-.myAcc .userImg span{width: 28px; height: 28px; overflow: hidden; cursor: pointer; position: relative;}
-.myAcc .userInfo {padding-left: 10px;}
-.myAcc .userInfo p { font-size: 9px; line-height: 15px;}
-.myAcc .userInfo h4 { font-size: 12px; font-weight: 600; margin-bottom: 0; text-transform: capitalize; color: #0858f7;}
+.userImg {overflow: hidden; width: 32px; height: 32px; border: 1px solid #0858f7; padding: 0px;}
+.userImg span{width: 28px; height: 28px; overflow: hidden; cursor: pointer; position: relative;}
+.userImg.lg span, .userImg.lg{width: 60px; height: 60px;}
+.userInfo {padding-left: 10px;}
+.userInfo p { font-size: 9px; line-height: 15px;}
+.userInfo h4 { font-size: 12px; font-weight: 600; margin-bottom: 0; text-transform: capitalize; color: #0858f7;}
 .profiledropdown ul li svg { width: 20px; height: 20px; }
 /* Container for sidebar and main content */
 .header {
@@ -243,12 +244,46 @@ body.dark .sidebarnav .submenu li {
 body.dark .sidebarnav .submenu::before{
   background: #ffffffb3 !important;
 }
-body.dark .sidebar button.active .icon svg, body.dark .sidebar button.active {
+body.dark .sidebar button.active .icon svg, body.dark .sidebar button.active, body.dark .loginheader h5, body.dark .dont-have-account  {
   color: #fff !important;
 }
 body.dark .wrapper-card .card {
   background: #112143;
 }
+body.dark .logincontent {
+  background-color: #071739;
+  border: 1px solid #6d6d6d;
+}
+body.dark .form-label {
+  color: #fff;
+}
+body.dark .logincontent input::placeholder {
+  color: #fff;
+}
+body.dark .or span {
+  color : #fff;
+}
+body.dark .or .line {
+  background: #fff;
+}
+body.dark .loginwithgoogle button {
+  color: #fff !important;
+  border-color: rgb(120 120 120);
+}
+body.dark .loginwithgoogle button:hover {
+  border-color: #fff;;
+}
+body.dark .logincontent input {
+  background: #273250!important;
+  border-color: rgba(255, 255, 255,0.3) !important;
+}
+body.dark .passwordform svg, body.dark .forgetpassword a{
+  color: #fff;
+}
+body.dark .dont-have-account span a  {
+  color: rgba(255, 255, 255, 0.952) !important;
+}
+
 body.dark header button svg, body.dark .searchBox svg, body.dark .searchBox input::placeholder, body.dark .card h3, body.dark .card h6, body.dark .filter-section .MuiSelect-select, body.dark .filter-section svg, body.dark tbody tr td, body.dark .userInfo h4, body.dark .userInfo p {color: #ffffffb3 !important;}
 body.dark{background: #071739 !important;}
 body.dark .filter-section .MuiInputBase-root {
@@ -268,6 +303,70 @@ body.dark .MuiPaper-root.MuiPaper-elevation {
   background: #112143;
   color: #ffffffb3;
 }
+body.dark .auth-page:before {
+  background: rgb(17 33 67 / 84%);
+}
+body.dark .auth-left-side h1, body.dark .auth-left-side p{
+  color: #fff;
+}
+body.dark  .breadcrumb-set li.MuiBreadcrumbs-separator {
+  color: #fff;
+}
+body.dark  .breadcrumb-set ol.MuiBreadcrumbs-ol li a {background: transparent;color: #fff;}
+body.dark  .breadcrumb-set ol.MuiBreadcrumbs-ol li a svg {
+  color: #fff;
+}
+body.dark  .breadcrumb-set ol.MuiBreadcrumbs-ol li div {
+  background: transparent;
+  color: #fff;
+}
+.slider-container .slick-dots li button {
+  width: 55px;
+  height: 55px;
+  margin: 0 !important;
+  border: 1px dashed #1866ee;
+}
+body.dark .slider-container .slick-dots li button {
+  border: 1px dashed #fff;
+}
+.slider-container .slick-dots li {
+  width: 60px;
+  height: 60px;
+  margin: 0;
+}
+.slider-container .slick-dots {
+  bottom: unset;
+}
+.slider-container ul.slick-dots.slick-thumb {
+  margin-top: 10px;
+}
+.product-view {
+  padding-bottom: 100px !important;
+}
+.product-gallery {
+  padding: 20px;
+  border: 1px dashed #1866ee;
+}
+body.dark .product-gallery {
+  border: 1px dashed #fff;
+}
+.product-width {
+  min-width: 140px;
+}
+.client-review{width:100%; height: 100px;background-color: #eee; padding: 35px; border-radius: 10px;}
+body.dark .client-review {
+  background-color: #071739; 
+}
+.reviewsSection .rating svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit.css-1vooibu-MuiSvgIcon-root {
+  color: #faaf00;
+}
+.reviewForm textarea {
+  width: 100%; height: 200px; background: #eee !important; outline: navajowhite !important; padding: 15px; border-radius: 10px; color: rgba(0, 0,0,0.8); border-color: #d6d6d6;
+}
+body.dark .reviewForm textarea {
+  background: #071739 !important; outline: navajowhite !important; padding: 15px; border-radius: 10px; color: rgba(255, 255, 255, 0.7); border-color: #4b5262;
+}
+body.dark .reviewForm textarea::-webkit-input-placeholder{color: rgba(255,255,255,0.7);}
 /* Responsive sidebar width using calc() */
   @media (min-width: 320px) {
     .sidebar {

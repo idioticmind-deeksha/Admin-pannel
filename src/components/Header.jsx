@@ -16,6 +16,7 @@ import Logout from "@mui/icons-material/Logout";
 import { IoShieldHalfOutline } from "react-icons/io5";
 import { FaUserCog } from "react-icons/fa";
 import { MyContext } from "../App";
+import UserAvatarimg from "./UserAvatarimg";
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -89,11 +90,7 @@ const Header = () => {
                 onClick={handleMenuClick}
                 className="myAcc d-flex align-items-center text-start"
               >
-                <div className="userImg d-flex align-items-center justify-content-center rounded-circle">
-                  <span className="rounded-circle d-flex align-items-center justify-content-center">
-                    <img src={profileImg} alt="Profile" className="w-100" />
-                  </span>
-                </div>
+                <UserAvatarimg img={profileImg}/>
                 <div className="userInfo">
                   <h4>Jack Miller</h4>
                   <p className="mb-0">@jackmiller34</p>

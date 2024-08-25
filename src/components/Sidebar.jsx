@@ -20,7 +20,7 @@ const SideBar = () => {
       <div className="sidebarnav p-3">
         <ul>
           <li>
-            <Link to="/dashboard" className="text-decoration-none">
+            <Link to="/" className="text-decoration-none">
               <Button
                 className={`w-100 d-flex align-items-center py-3 px-2 ${
                   activeTab === 0 ? "active" : ""
@@ -59,10 +59,10 @@ const SideBar = () => {
             >
               <ul className="submenu">
                 <li>
-                  <Link to="">Product List</Link>
+                  <Link to="/product">Product List</Link>
                 </li>
                 <li>
-                  <Link to="">Product View</Link>
+                  <Link to="/product-view">Product View</Link>
                 </li>
                 <li>
                   <Link to="">Product Update</Link>
